@@ -4,7 +4,7 @@ function NavbarView(props) {
   return (
     <React.Fragment>
       {/* <!-- Navbar Starts --> */}
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+      <nav id="pageTop" className="navbar navbar-expand-md navbar-dark bg-dark">
         {/* <!-- Drawer Start --> */}
         <button className="btn btn-outline-light" data-toggle="drawer" data-target="#amazonDrawer">
           <i className="fas fa-sliders-h"></i>
