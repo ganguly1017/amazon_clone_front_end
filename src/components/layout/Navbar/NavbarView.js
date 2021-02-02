@@ -1,10 +1,7 @@
 import React from 'react'
 
 function NavbarView(props) {
-  const { t, i18n } = props;
-
-  console.log(t('navbar.sidebar_title', {username:' Sandeep', test: "rest"}));
-  console.log(i18n.languages[0]);
+  const { t, rtl } = props;
   return (
     <React.Fragment>
       {/* <!-- Navbar Starts --> */}
@@ -18,15 +15,15 @@ function NavbarView(props) {
           aria-hidden="true" id="amazonDrawer">
           <div className="drawer-content drawer-content-scrollable" role="document">
             <div className="drawer-header bg-dark text-white">
-              <h4 className="drawer-title mx-auto" id="drawer-demo-title">
+              <h4 className={`drawer-title mx-auto ${rtl}`} id="drawer-demo-title">
                 <i className="fas fa-user-circle"></i>
-            Hello, Sign In
+              {t('navbar.sidebar_title')}
           </h4>
             </div>
             <div className="drawer-body">
-              <h6 className="text-muted text-uppercase">Help & Settings</h6>
-              <a href="your_account.html" className="btn btn-outline-success my-2 btn-sm">You Account</a>
-              <a href="login.html" className="btn btn-warning my-2  btn-sm">Sign in</a>
+              <h6 className={`text-muted text-uppercase ${rtl}`}>{t('navbar.sidebar_help_title')}</h6>
+              <a href="your_account.html" className={`btn btn-outline-success my-2 btn-sm ${rtl}`}>{t('navbar.btn_account_title')}</a>
+              <a href="login.html" className={`btn btn-warning my-2 btn-sm ${rtl}`}>{t('navbar.btn_signin_title')}</a>
             </div>
             <div className="drawer-footer">
               <button type="button" className="btn btn-outline-danger btn-sm" data-dismiss="drawer" aria-label="Close">
@@ -64,7 +61,7 @@ function NavbarView(props) {
                   </div>
                 </div>
               </div>
-              <input type="text" className="form-control" size="50" name="query" id="query" />
+              <input type="text" className={`form-control ${rtl}`} size="50" name="query" id="query" />
               <input type="text" name="category" id="category" value="book" hidden />
               <div className="input-group-append">
                 <button type="submit" className="btn btn-warning">
@@ -85,29 +82,32 @@ function NavbarView(props) {
                 <form className="p-3">
                   <div className="dropdown-divider"></div>
                   <div className="custom-control custom-radio mb-2">
-                    <input className="custom-control-input" type="radio" name="prefLang" id="englishLang" value="english"
-                      checked />
+                    <input className="custom-control-input" type="radio" name="prefLang" id="englishLang" value="en"
+                      onClick={props.handleChangeLang} checked={ props.prefLang == "en" ? true : false } />
                     <label className="custom-control-label" htmlFor="englishLang">
                       <img src="assets/img/flag/english.svg" alt="uk flag" width="50" height="30" />
                     </label>
                   </div>
                   <div className="dropdown-divider"></div>
                   <div className="custom-control custom-radio mb-2">
-                    <input className="custom-control-input" type="radio" name="prefLang" id="hindiLang" value="hindi" checked />
+                    <input className="custom-control-input" type="radio" name="prefLang" id="hindiLang" value="in" 
+                    onClick={props.handleChangeLang} checked={ props.prefLang == "in" ? true : false } />
                     <label className="custom-control-label" htmlFor="hindiLang">
                       <img src="assets/img/flag/hindi.svg" alt="uk flag" width="50" height="30" />
                     </label>
                   </div>
                   <div className="dropdown-divider"></div>
                   <div className="custom-control custom-radio mb-2">
-                    <input className="custom-control-input" type="radio" name="prefLang" id="urduLang" value="urdu" checked />
+                    <input className="custom-control-input" type="radio" name="prefLang" id="urduLang" value="pk" 
+                    onClick={props.handleChangeLang} checked={ props.prefLang == "pk" ? true : false } />
                     <label className="custom-control-label" htmlFor="urduLang">
                       <img src="assets/img/flag/urdu.svg" alt="uk flag" width="50" height="30" />
                     </label>
                   </div>
                   <div className="dropdown-divider"></div>
                   <div className="custom-control custom-radio">
-                    <input className="custom-control-input" type="radio" name="prefLang" id="banglaLang" value="bangla" checked />
+                    <input className="custom-control-input" type="radio" name="prefLang" id="banglaLang" value="bd" 
+                    onClick={props.handleChangeLang}  checked={ props.prefLang == "bd" ? true : false } />
                     <label className="custom-control-label" htmlFor="banglaLang">
                       <img src="assets/img/flag/bangla.svg" alt="uk flag" width="50" height="30" />
                     </label>
@@ -125,8 +125,8 @@ function NavbarView(props) {
               </a>
               <div className="dropdown-menu px-3" aria-labelledby="userAccount">
                 <div className="d-flex flex-column justify-content-center">
-                  <a href="login.html" className="btn btn-warning w-75 btn-sm font-weight-bold">Signin</a>
-                  <small>New customer?<a href="register.html"> Start here.</a></small>
+                  <a href="login.html" className={`btn btn-warning w-75 btn-sm font-weight-bold ${rtl}`}>{t('navbar.menu_signin_btn_title')}</a>
+                  <small>{t('navbar.menu_signin_sub_title')}? <a href="register.html">{t('navbar.menu_signing_register_text')}</a></small>
                 </div>
               </div>
             </li>
