@@ -1,0 +1,11 @@
+{
+  "navbar": {
+    "sidebar_title": "হ্যালো, সাইন ইন",
+    "sidebar_help_title": "সহায়তা ও সেটিংস",
+    "btn_account_title": "আপনার অ্যাকাউন্ট",
+    "btn_signin_title": "সাইন ইন করুন",
+    "menu_signin_btn_title": "সাইন ইন করুন",
+    "menu_signin_sub_title":"নতুন গ্রাহক",
+    "menu_signing_register_text": "এখান থেকে শুরু কর"
+  }
+}

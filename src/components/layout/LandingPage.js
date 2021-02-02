@@ -4,14 +4,14 @@ import ImageSlider from './ImageSlider';
 import HomePageProductContainer from './../HomePageProduct/HomePageProductContainer';
 import Footer from './Footer';
 
-function LandingPage() {
+function LandingPage(props) {
   return (
     <React.Fragment>
-      <NavbarContainer />
+      <NavbarContainer {...props} />
       <div className="container-fluid px-0">
         <ImageSlider />
         <HomePageProductContainer />
-        <Footer />
+        <Footer {...props} />
       </div>
     </React.Fragment>
   )
