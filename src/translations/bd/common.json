@@ -6,6 +6,13 @@
     "btn_signin_title": "সাইন ইন করুন",
     "menu_signin_btn_title": "সাইন ইন করুন",
     "menu_signin_sub_title":"নতুন গ্রাহক",
-    "menu_signing_register_text": "এখান থেকে শুরু কর"
+    "menu_signing_register_text": "এখান থেকে শুরু কর",
+    "product_category": {
+      "all": "সব",
+      "smartphone": "স্মার্টফোন",
+      "kitchen_hardware": "রান্নাঘর হার্ডওয়্যার",
+      "prime_deal": "প্রাইম ডিলস",
+      "book": "বই"
+    }
   }
 }

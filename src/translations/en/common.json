@@ -6,6 +6,13 @@
     "btn_signin_title": "Sign in",
     "menu_signin_btn_title": "Signin",
     "menu_signin_sub_title":"New customer",
-    "menu_signing_register_text": "Start here"
+    "menu_signing_register_text": "Start here",
+    "product_category": {
+      "all": "All",
+      "smartphone": "Smartphone",
+      "kitchen_hardware": "Kitchen Hardware",
+      "prime_deal": "Prime Deals",
+      "book": "Book"
+    }
   }
 }

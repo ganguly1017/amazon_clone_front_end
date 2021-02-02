@@ -6,6 +6,13 @@
     "btn_signin_title": "سائن ان",
     "menu_signin_btn_title": "سائن ان",
     "menu_signin_sub_title":"نیا گاہک",
-    "menu_signing_register_text": "یہاں سے شروع کرو"
+    "menu_signing_register_text": "یہاں سے شروع کرو",
+    "product_category": {
+      "all": "سب",
+      "smartphone": "اسمارٹ فون",
+      "kitchen_hardware": "کچن ہارڈویئر",
+      "prime_deal": "پرائم ڈیلز",
+      "book": "کتاب"
+    }
   }
 }

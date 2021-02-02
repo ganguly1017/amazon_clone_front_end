@@ -2,6 +2,7 @@ import React from 'react'
 
 function NavbarView(props) {
   const { t, rtl } = props;
+  
   return (
     <React.Fragment>
       {/* <!-- Navbar Starts --> */}
@@ -44,25 +45,27 @@ function NavbarView(props) {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           {/* <!-- Search Bar Starts --> */}
-          <form className="form-inline px-lg-5" noValidate method="get">
+          <form className="form-inline px-lg-5" onSubmit={props.handleSearch} noValidate method="get">
             <div className="input-group">
               <div className="input-group-prepend">
                 <div className="dropdown">
-                  <button className="btn btn-secondary dropdown-toggle" name="btnCategory" type="button"
+                  <button className={`btn btn-secondary dropdown-toggle ${rtl}`} name="btnCategory" type="button"
                     id="btnCategoryDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    All
+                    {t(props.productCategory[props.selectedCat])}
               </button>
                   <div className="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
-                    <a className="dropdown-item" href="#">All</a>
-                    <a className="dropdown-item" href="#">Smartphone</a>
-                    <a className="dropdown-item" href="#">Kitchen Hardware</a>
-                    <a className="dropdown-item" href="#">Prime Deals</a>
-                    <a className="dropdown-item" href="#">Book</a>
+                    <a className={`dropdown-item ${rtl}`} href="#" onClick={(e) => { props.handleCatChange(e, 0) } }>{t('navbar.product_category.all')}</a>
+                    <a className={`dropdown-item ${rtl}`} href="#" onClick={(e) => { props.handleCatChange(e, 1) } }>{t('navbar.product_category.smartphone')}</a>
+                    <a className={`dropdown-item ${rtl}`} href="#" onClick={(e) => { props.handleCatChange(e, 2) } }>{t('navbar.product_category.kitchen_hardware')}</a>
+                    <a className={`dropdown-item ${rtl}`} href="#" onClick={(e) => { props.handleCatChange(e, 3) } }>{t('navbar.product_category.prime_deal')}</a>
+                    <a className={`dropdown-item ${rtl}`} href="#" onClick={(e) => { props.handleCatChange(e, 4) } }>{t('navbar.product_category.book')}</a>
                   </div>
                 </div>
               </div>
-              <input type="text" className={`form-control ${rtl}`} size="50" name="query" id="query" />
-              <input type="text" name="category" id="category" value="book" hidden />
+              <input type="text" className={`form-control ${rtl}`} size="50" name="query" id="query"
+                onChange={props.handleQueryChange} value={props.query}
+              />
+              <input type="text" name="category" id="category" value={props.selectedCat} hidden />
               <div className="input-group-append">
                 <button type="submit" className="btn btn-warning">
                   <i className="fas fa-search"></i>
