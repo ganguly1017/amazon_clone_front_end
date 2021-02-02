@@ -14,5 +14,41 @@
       "prime_deal": "پرائم ڈیلز",
       "book": "کتاب"
     }
+  },
+  "footer": {
+    "back_to_top":"اوپر کی طرف واپس",
+    "upper": {
+      "col1" : {
+        "title": "ہم سے واقف ہوں",
+        "about": "کے بارے میں",
+        "career": "کیریئر",
+        "press_release": "اخبار کے لیے خبر",
+        "investment": "سرمایہ کاری",
+        "offers": "پیش کرتا ہے"
+      },
+      "col2" : {
+        "title": "ہم سے رجوع فرمائیں",
+        "facebook": "فیس بک",
+        "twitter": "ٹویٹر",
+        "instagram": "انسٹاگرام"
+      },
+      "col3" : {
+        "title": "ہمارے ساتھ پیسہ کمائیں",
+        "amazon_seller": "ایمیزون پر فروخت کریں",
+        "affiliate_marketing": "الحاق کی مارکیٹنگ",
+        "fullfilment_center": "فل فلمنٹ سینٹر",
+        "advertise": "اپنی مصنوعات کی تشہیر کریں",
+        "amazon_pay": "ایمیزون پے"
+      },
+      "col4" : {
+        "title": "آئیے آپ کی مدد کریں",
+        "covid": "COVID 19",
+        "your_account": "آپ کا کھاتہ",
+        "returns": "واپسی",
+        "funding": "فنڈنگ",
+        "help": "مدد"
+      }
+    },
+    "ending_title": "ایمیزون ڈاٹ کام انکارپوریٹڈ" 
   }
 }

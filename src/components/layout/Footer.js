@@ -1,47 +1,51 @@
 import React from 'react'
 
-function Footer() {
+function Footer(props) {
+
+  const { t, i18n } = props;
+  const rtl = ( i18n.languages[0] == 'pk' ? 'text-right' : '');
+
   return (
     <React.Fragment>
       {/* <!-- Footer Starts --> */}
       <div className="container-fluid bg-dark px-0">
-        <a href="#pageTop" className="btn btn-dark btn-block mb-5">Back to Top</a>
+        <a href="#pageTop" className={`btn btn-dark btn-block mb-5 ${rtl}`}>{t('footer.back_to_top')}</a>
 
         <div className="container">
           <div className="row text-white mb-5">
 
             <div className="col-md-3">
-              <h5>Get to know us</h5>
-              <a href="#" className="text-white">About</a> <br />
-              <a href="#" className="text-white">Careers</a> <br />
-              <a href="#" className="text-white">Press Release</a> <br />
-              <a href="#" className="text-white">Investment</a> <br />
-              <a href="#" className="text-white">Offers</a> <br />
+              <h5>{t('footer.upper.col1.title')}</h5>
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col1.about')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col1.career')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col1.press_release')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col1.investment')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col1.offers')}</a> <br />
             </div>
 
             <div className="col-md-3">
-              <h5>Connect With Us</h5>
-              <a href="#" className="text-white">Facebook</a> <br />
-              <a href="#" className="text-white">Twitter</a> <br />
-              <a href="#" className="text-white">Instagram</a> <br />
+              <h5>{t('footer.upper.col2.title')}</h5>
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col2.facebook')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col2.twitter')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col2.instagram')}</a> <br />
             </div>
 
             <div className="col-md-3">
-              <h5>Make Money With Us</h5>
-              <a href="#" className="text-white">Sell on Amazon</a> <br />
-              <a href="#" className="text-white">Affiliate Marketing</a> <br />
-              <a href="#" className="text-white">Fullfilment Center</a> <br />
-              <a href="#" className="text-white">Advertise Your Product</a> <br />
-              <a href="#" className="text-white">Amazon Pay</a> <br />
+              <h5>{t('footer.upper.col3.title')}</h5>
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col3.amazon_seller')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col3.affiliate_marketing')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col3.fullfilment_center')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col3.advertise')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col3.amazon_pay')}</a> <br />
             </div>
 
             <div className="col-md-3">
-              <h5>Let Us Help You</h5>
-              <a href="#" className="text-white">COVID 19</a> <br />
-              <a href="#" className="text-white">Your Account</a> <br />
-              <a href="#" className="text-white">Returns</a> <br />
-              <a href="#" className="text-white">Funding</a> <br />
-              <a href="#" className="text-white">Help</a> <br />
+              <h5>{t('footer.upper.col4.title')}</h5>
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col4.covid')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col4.your_account')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col4.returns')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col4.funding')}</a> <br />
+              <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col4.help')}</a> <br />
             </div>
 
           </div>
@@ -62,44 +66,44 @@ function Footer() {
             <div className="row text-white">
 
               <div className="col-md-3">
-                <p>Get to know us</p>
-                <a href="#" className="text-white">About</a> <br />
-                <a href="#" className="text-white">Careers</a> <br />
-                <a href="#" className="text-white">Press Release</a> <br />
-                <a href="#" className="text-white">Investment</a> <br />
-                <a href="#" className="text-white">Offers</a> <br />
+                <p>{t('footer.upper.col1.title')}</p>
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col1.about')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col1.career')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col1.press_release')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col1.investment')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col1.offers')}</a> <br />
               </div>
 
               <div className="col-md-3">
-                <p>Connect With Us</p>
-                <a href="#" className="text-white">Facebook</a> <br />
-                <a href="#" className="text-white">Twitter</a> <br />
-                <a href="#" className="text-white">Instagram</a> <br />
+                <p>{t('footer.upper.col2.title')}</p>
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col2.facebook')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col2.twitter')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col2.instagram')}</a> <br />
               </div>
 
               <div className="col-md-3">
-                <p>Make Money With Us</p>
-                <a href="#" className="text-white">Sell on Amazon</a> <br />
-                <a href="#" className="text-white">Affiliate Marketing</a> <br />
-                <a href="#" className="text-white">Fullfilment Center</a> <br />
-                <a href="#" className="text-white">Advertise Your Product</a> <br />
-                <a href="#" className="text-white">Amazon Pay</a> <br />
+                <p>{t('footer.upper.col3.title')}</p>
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col3.amazon_seller')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col3.affiliate_marketing')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col3.fullfilment_center')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col3.advertise')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col3.amazon_pay')}</a> <br />
               </div>
 
               <div className="col-md-3">
-                <p>Let Us Help You</p>
-                <a href="#" className="text-white">COVID 19</a> <br />
-                <a href="#" className="text-white">Your Account</a> <br />
-                <a href="#" className="text-white">Returns</a> <br />
-                <a href="#" className="text-white">Funding</a> <br />
-                <a href="#" className="text-white">Help</a> <br />
+                <p>{t('footer.upper.col4.title')}</p>
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col4.covid')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col4.your_account')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col4.returns')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col4.funding')}</a> <br />
+                <a href="#" className={`text-white ${rtl}`}>{t('footer.upper.col4.help')}</a> <br />
               </div>
             </div>
 
             <div className="row my-5">
               <div className="col-md-12 text-center text-white">
                 <p>
-                  <i className="far fa-copyright"></i> 1996-2020, Amazon.com Inc.
+                  <i className="far fa-copyright"></i> { "1996-" + (new Date().getFullYear()) + ", " + t('footer.ending_title')}
                 </p>
               </div>
             </div>

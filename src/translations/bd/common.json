@@ -14,5 +14,41 @@
       "prime_deal": "প্রাইম ডিলস",
       "book": "বই"
     }
+  },
+  "footer": {
+    "back_to_top":"উপরে ফিরে যাও",
+    "upper": {
+      "col1" : {
+        "title": "আমাদের জানতে পারেন",
+        "about": "সম্পর্কিত",
+        "career": "কেরিয়ার",
+        "press_release": "প্রেস রিলিজ",
+        "investment": "বিনিয়োগ",
+        "offers": "অফার"
+      },
+      "col2" : {
+        "title": "আমাদের সাথে যোগাযোগ করুন",
+        "facebook": "ফেসবুক",
+        "twitter": "টুইটার",
+        "instagram": "ইনস্টাগ্রাম"
+      },
+      "col3" : {
+        "title": "আমাদের সাথে অর্থোপার্জন করুন",
+        "amazon_seller": "আমাজনে বিক্রয় করুন",
+        "affiliate_marketing": "অনুমোদিত বিপণন",
+        "fullfilment_center": "ফুলফিলমেন্ট কেন্দ্র",
+        "advertise": "আপনার পণ্য বিজ্ঞাপন",
+        "amazon_pay": "আমাজন পে"
+      },
+      "col4" : {
+        "title": "আমাদের সাহায্য করুন",
+        "covid": "কোভিড 19",
+        "your_account": "আপনার অ্যাকাউন্ট",
+        "returns": "ফিরে আসে",
+        "funding": "অর্থায়ন",
+        "help": "সহায়তা"
+      }
+    },
+    "ending_title": "Amazon.com ইনক।" 
   }
 }

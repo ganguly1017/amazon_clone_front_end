@@ -14,5 +14,41 @@
       "prime_deal": "प्रधान सौदे",
       "book": "पुस्तक"
     }
+  },
+  "footer": {
+    "back_to_top":"वापस शीर्ष पर",
+    "upper": {
+      "col1" : {
+        "title": "हमारे बारे में जानिए",
+        "about": "के बारे में",
+        "career": "कैरियर",
+        "press_release": "प्रेस विज्ञप्ति",
+        "investment": "निवेश",
+        "offers": "प्रदान करता है"
+      },
+      "col2" : {
+        "title": "हमसे जुडे",
+        "facebook": "फेसबुक",
+        "twitter": "ट्विटर",
+        "instagram": "इंस्टाग्राम"
+      },
+      "col3" : {
+        "title": "हमारे साथ पैसा बनाओ",
+        "amazon_seller": "अमेज़न पर बेचें",
+        "affiliate_marketing": "सहबद्ध विपणन",
+        "fullfilment_center": "फुलफिलमेंट सेंटर",
+        "advertise": "अपने उत्पाद का विज्ञापन करें",
+        "amazon_pay": "अमेज़न पे"
+      },
+      "col4" : {
+        "title": "हमें अपनी सहायता करने दें",
+        "covid": "कोविड 19",
+        "your_account": "Your Account",
+        "returns": "आपका खाता",
+        "funding": "धन देना",
+        "help": "हाथ बटाना"
+      }
+    },
+    "ending_title": "Amazon.com Inc." 
   }
 }

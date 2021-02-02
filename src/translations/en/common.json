@@ -14,5 +14,41 @@
       "prime_deal": "Prime Deals",
       "book": "Book"
     }
+  },
+  "footer": {
+    "back_to_top":"Back to Top",
+    "upper": {
+      "col1" : {
+        "title": "Get to know us",
+        "about": "About",
+        "career": "Career",
+        "press_release": "Press Release",
+        "investment": "Investment",
+        "offers": "Offers"
+      },
+      "col2" : {
+        "title": "Connect With Us",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram"
+      },
+      "col3" : {
+        "title": "Make Money With Us",
+        "amazon_seller": "Sell on Amazon",
+        "affiliate_marketing": "Affiliate Marketing",
+        "fullfilment_center": "Fullfilment Center",
+        "advertise": "Advertise Your Product",
+        "amazon_pay": "Amazon Pay"
+      },
+      "col4" : {
+        "title": "Let Us Help You",
+        "covid": "COVID 19",
+        "your_account": "Your Account",
+        "returns": "Returns",
+        "funding": "Funding",
+        "help": "Help"
+      }
+    },
+    "ending_title": "Amazon.com Inc." 
   }
 }
