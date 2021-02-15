@@ -5,7 +5,7 @@
     "btn_account_title": "আপনার অ্যাকাউন্ট",
     "btn_signin_title": "সাইন ইন করুন",
     "menu_signin_btn_title": "সাইন ইন করুন",
-    "menu_signin_sub_title":"নতুন গ্রাহক",
+    "menu_signin_sub_title": "নতুন গ্রাহক",
     "menu_signing_register_text": "এখান থেকে শুরু কর",
     "product_category": {
       "all": "সব",
@@ -16,9 +16,9 @@
     }
   },
   "footer": {
-    "back_to_top":"উপরে ফিরে যাও",
+    "back_to_top": "উপরে ফিরে যাও",
     "upper": {
-      "col1" : {
+      "col1": {
         "title": "আমাদের জানতে পারেন",
         "about": "সম্পর্কিত",
         "career": "কেরিয়ার",
@@ -26,13 +26,13 @@
         "investment": "বিনিয়োগ",
         "offers": "অফার"
       },
-      "col2" : {
+      "col2": {
         "title": "আমাদের সাথে যোগাযোগ করুন",
         "facebook": "ফেসবুক",
         "twitter": "টুইটার",
         "instagram": "ইনস্টাগ্রাম"
       },
-      "col3" : {
+      "col3": {
         "title": "আমাদের সাথে অর্থোপার্জন করুন",
         "amazon_seller": "আমাজনে বিক্রয় করুন",
         "affiliate_marketing": "অনুমোদিত বিপণন",
@@ -40,7 +40,7 @@
         "advertise": "আপনার পণ্য বিজ্ঞাপন",
         "amazon_pay": "আমাজন পে"
       },
-      "col4" : {
+      "col4": {
         "title": "আমাদের সাহায্য করুন",
         "covid": "কোভিড 19",
         "your_account": "আপনার অ্যাকাউন্ট",
@@ -49,6 +49,23 @@
         "help": "সহায়তা"
       }
     },
-    "ending_title": "Amazon.com ইনক।" 
+    "ending_title": "Amazon.com ইনক।"
+  },
+  "login": {
+    "title": "প্রবেশ করুন",
+    "lbl_email": "ইমেল:",
+    "lbl_password": "পাসওয়ার্ড:",
+    "email_info": "আমরা আপনার ইমেল অন্য কারও সাথে ভাগ করব না।",
+    "password_info": "পাসওয়ার্ড কমপক্ষে 6 টি অক্ষর হতে হবে।",
+    "btn_signin": "সাইন ইন করুন",
+    "seperator_text": "আমাজনে নতুন?",
+    "btn_register_text": "আপনার অ্যামাজন অ্যাকাউন্ট তৈরি করুন",
+    "btn_login_google": "গুগল দিয়ে সাইন ইন করুন",
+    "btn_login_facebook": "ফেসবুকে সাইন - ইন করুন"
+  },
+  "validation": {
+    "email_error": "ইমেইলে কিছু ত্রুটি।",
+    "password_error": "পাসওয়ার্ডে কিছু ত্রুটি।",
+    "ok": "ঠিক আছে"
   }
 }

@@ -5,7 +5,7 @@
     "btn_account_title": "Your Account",
     "btn_signin_title": "Sign in",
     "menu_signin_btn_title": "Signin",
-    "menu_signin_sub_title":"New customer",
+    "menu_signin_sub_title": "New customer",
     "menu_signing_register_text": "Start here",
     "product_category": {
       "all": "All",
@@ -16,9 +16,9 @@
     }
   },
   "footer": {
-    "back_to_top":"Back to Top",
+    "back_to_top": "Back to Top",
     "upper": {
-      "col1" : {
+      "col1": {
         "title": "Get to know us",
         "about": "About",
         "career": "Career",
@@ -26,13 +26,13 @@
         "investment": "Investment",
         "offers": "Offers"
       },
-      "col2" : {
+      "col2": {
         "title": "Connect With Us",
         "facebook": "Facebook",
         "twitter": "Twitter",
         "instagram": "Instagram"
       },
-      "col3" : {
+      "col3": {
         "title": "Make Money With Us",
         "amazon_seller": "Sell on Amazon",
         "affiliate_marketing": "Affiliate Marketing",
@@ -40,7 +40,7 @@
         "advertise": "Advertise Your Product",
         "amazon_pay": "Amazon Pay"
       },
-      "col4" : {
+      "col4": {
         "title": "Let Us Help You",
         "covid": "COVID 19",
         "your_account": "Your Account",
@@ -49,6 +49,23 @@
         "help": "Help"
       }
     },
-    "ending_title": "Amazon.com Inc." 
+    "ending_title": "Amazon.com Inc."
+  },
+  "login": {
+    "title": "Login",
+    "lbl_email": "Email:",
+    "lbl_password": "Password:",
+    "email_info": "We'll never share your email with anyone else.",
+    "password_info": "Password must be at least 6 characters.",
+    "btn_signin": "Sign In",
+    "seperator_text": "New to Amazon?",
+    "btn_register_text": "Create your Amazon account",
+    "btn_login_google": "Sign in with Google",
+    "btn_login_facebook": "Sign in with Facebook"
+  },
+  "validation": {
+    "email_error": "Some error in email.",
+    "password_error": "Some error in password.",
+    "ok": "OK"
   }
 }

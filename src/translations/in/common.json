@@ -5,7 +5,7 @@
     "btn_account_title": "आपका खाता",
     "btn_signin_title": "साइन इन करें",
     "menu_signin_btn_title": "साइन इन करें",
-    "menu_signin_sub_title":"नए ग्राहक",
+    "menu_signin_sub_title": "नए ग्राहक",
     "menu_signing_register_text": "यहाँ से शुरू",
     "product_category": {
       "all": "सब",
@@ -16,9 +16,9 @@
     }
   },
   "footer": {
-    "back_to_top":"वापस शीर्ष पर",
+    "back_to_top": "वापस शीर्ष पर",
     "upper": {
-      "col1" : {
+      "col1": {
         "title": "हमारे बारे में जानिए",
         "about": "के बारे में",
         "career": "कैरियर",
@@ -26,13 +26,13 @@
         "investment": "निवेश",
         "offers": "प्रदान करता है"
       },
-      "col2" : {
+      "col2": {
         "title": "हमसे जुडे",
         "facebook": "फेसबुक",
         "twitter": "ट्विटर",
         "instagram": "इंस्टाग्राम"
       },
-      "col3" : {
+      "col3": {
         "title": "हमारे साथ पैसा बनाओ",
         "amazon_seller": "अमेज़न पर बेचें",
         "affiliate_marketing": "सहबद्ध विपणन",
@@ -40,7 +40,7 @@
         "advertise": "अपने उत्पाद का विज्ञापन करें",
         "amazon_pay": "अमेज़न पे"
       },
-      "col4" : {
+      "col4": {
         "title": "हमें अपनी सहायता करने दें",
         "covid": "कोविड 19",
         "your_account": "Your Account",
@@ -49,6 +49,23 @@
         "help": "हाथ बटाना"
       }
     },
-    "ending_title": "Amazon.com Inc." 
+    "ending_title": "Amazon.com Inc."
+  },
+  "login": {
+    "title": "लॉग इन करें",
+    "lbl_email": "ईमेल:",
+    "lbl_password": "कुंजिका:",
+    "email_info": "हम आपके ईमेल को कभी भी किसी और के साथ साझा नहीं करेंगे।",
+    "password_info": "पासवर्ड कम से कम 6 अंकों का होना चाहिए।",
+    "btn_signin": "साइन इन करें",
+    "seperator_text": "अमेज़न के लिए नया?",
+    "btn_register_text": "अपना अमेज़न खाता बनाएँ",
+    "btn_login_google": "Google के साथ साइन इन करें",
+    "btn_login_facebook": "फ़ेसबुक से साइन इन करें"
+  },
+  "validation": {
+    "email_error": "ईमेल में कुछ त्रुटि।",
+    "password_error": "पासवर्ड में कुछ त्रुटि।",
+    "ok": "ठीक है"
   }
 }

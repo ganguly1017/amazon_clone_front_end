@@ -31,6 +31,7 @@ class LoginContainer extends Component {
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
         {...this.satte}
+        {...this.props}
       />
     )
   }
