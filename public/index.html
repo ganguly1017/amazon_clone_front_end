@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Amazon Clone Website" />
-  
+
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  
+
   <!-- Font Awesome CSS CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
@@ -41,5 +41,27 @@
   <script src="assets/js/bootstrap-drawer.min.js"></script>
   <!-- Custom JavaScript -->
   <script src="assets/js/custom.js"></script>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
 </body>
+
 </html>
