@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function NavbarView(props) {
   const { t, rtl } = props;
@@ -24,7 +25,7 @@ function NavbarView(props) {
             <div className="drawer-body">
               <h6 className={`text-muted text-uppercase ${rtl}`}>{t('navbar.sidebar_help_title')}</h6>
               <a href="your_account.html" className={`btn btn-outline-success my-2 btn-sm ${rtl}`}>{t('navbar.btn_account_title')}</a>
-              <a href="login.html" className={`btn btn-warning my-2 btn-sm ${rtl}`}>{t('navbar.btn_signin_title')}</a>
+              <Link to="/login" className={`btn btn-warning my-2 btn-sm ${rtl}`}>{t('navbar.btn_signin_title')}</Link>
             </div>
             <div className="drawer-footer">
               <button type="button" className="btn btn-outline-danger btn-sm" data-dismiss="drawer" aria-label="Close">
@@ -35,9 +36,9 @@ function NavbarView(props) {
         </div>
         {/* <!-- Drawer Ends --> */}
 
-        <a className="navbar-brand pl-2" href="navbar.html">
+        <Link className="navbar-brand pl-2" to="/">
           <img src="assets/img/amazon_logo_white.png" height="30" width="100" alt="amazon logo white" />
-        </a>
+        </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -128,7 +129,7 @@ function NavbarView(props) {
               </a>
               <div className="dropdown-menu px-3" aria-labelledby="userAccount">
                 <div className="d-flex flex-column justify-content-center">
-                  <a href="login.html" className={`btn btn-warning w-75 btn-sm font-weight-bold ${rtl}`}>{t('navbar.menu_signin_btn_title')}</a>
+                  <Link to="/login" className={`btn btn-warning w-75 btn-sm font-weight-bold ${rtl}`}>{t('navbar.menu_signin_btn_title')}</Link>
                   <small>{t('navbar.menu_signin_sub_title')}? <a href="register.html">{t('navbar.menu_signing_register_text')}</a></small>
                 </div>
               </div>
