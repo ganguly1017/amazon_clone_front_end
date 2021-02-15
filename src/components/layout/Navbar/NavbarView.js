@@ -130,7 +130,7 @@ function NavbarView(props) {
               <div className="dropdown-menu px-3" aria-labelledby="userAccount">
                 <div className="d-flex flex-column justify-content-center">
                   <Link to="/login" className={`btn btn-warning w-75 btn-sm font-weight-bold ${rtl}`}>{t('navbar.menu_signin_btn_title')}</Link>
-                  <small>{t('navbar.menu_signin_sub_title')}? <a href="register.html">{t('navbar.menu_signing_register_text')}</a></small>
+                  <small>{t('navbar.menu_signin_sub_title')}? <Link to="/register">{t('navbar.menu_signing_register_text')}</Link></small>
                 </div>
               </div>
             </li>
