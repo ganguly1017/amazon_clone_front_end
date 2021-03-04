@@ -85,5 +85,24 @@
     "btn_login_facebook": "Sign in with Facebook",
     "btn_register": "Register",
     "have_account_text": "Already have an account?"
+  },
+  "your_account": {
+    "title":"Your Account",
+    "btn1": {
+      "title": "Your Orders",
+      "sub_title": "Track, return or buy things again."
+    },
+    "btn2": {
+      "title": "Password Change",
+      "sub_title": "Change your password."
+    },
+    "btn3": {
+      "title": "Your Addresses",
+      "sub_title": "Edit addresses for orders."
+    },
+    "btn4": {
+      "title": "Seller Account",
+      "sub_title": "Sell your products."
+    }
   }
 }

@@ -1,10 +1,13 @@
 import React from 'react'
 
-function YourAccountView() {
+function YourAccountView(props) {
+  const { t, i18n } = props;
+  const rtl = ( i18n.languages[0] == 'pk' ? 'text-right' : '');
+
   return (
     <div className="container mt-5">
       {/* <!-- Your Account Starts --> */}
-      <h2>Your Account</h2>
+      <h2 className={`${rtl}`}>{t('your_account.title')}</h2>
       {/* <!-- Account Panel Starts --> */}
       <div className="row">
         <div className="col-md-4">
@@ -13,9 +16,9 @@ function YourAccountView() {
               <div className="card-body">
                 <div className="card-title">
                   <i className="fas fa-2x fa-shopping-bag"></i>
-                  <span className="h4">Your Orders</span>
+                  <span className={`h4 ${rtl}`}>{t('your_account.btn1.title')}</span>
                 </div>
-                <small className="text-muted">Track, return or buy things again.</small>
+                <small className={`text-muted ${rtl}`}>{t('your_account.btn1.sub_title')}</small>
               </div>
             </div>
           </a>
@@ -27,9 +30,9 @@ function YourAccountView() {
               <div className="card-body">
                 <div className="card-title">
                   <i className="fas fa-2x fa-key"></i>
-                  <span className="h4">Password Change</span>
+                  <span className={`h4 ${rtl}`}>{t('your_account.btn2.title')}</span>
                 </div>
-                <small className="text-muted">Change your password.</small>
+                <small className={`text-muted ${rtl}`}>{t('your_account.btn2.sub_title')}</small>
               </div>
             </div>
           </a>
@@ -41,9 +44,9 @@ function YourAccountView() {
               <div className="card-body">
                 <div className="card-title">
                   <i className="fas fa-2x fa-map-marked-alt"></i>
-                  <span className="h4">Your Addresses</span>
+                  <span className={`h4 ${rtl}`}>{t('your_account.btn3.title')}</span>
                 </div>
-                <small className="text-muted">Edit addresses for orders.</small>
+                <small className={`text-muted ${rtl}`}>{t('your_account.btn3.sub_title')}</small>
               </div>
             </div>
           </a>
@@ -58,9 +61,9 @@ function YourAccountView() {
               <div className="card-body">
                 <div className="card-title">
                   <i className="fas fa-universal-access fa-2x"></i>
-                  <span className="h4">Seller Account</span>
+                  <span className={`h4 ${rtl}`}>{t('your_account.btn4.title')}</span>
                 </div>
-                <small className="text-muted">Sell your products.</small>
+                <small className={`text-muted ${rtl}`}>{t('your_account.btn4.sub_title')}</small>
               </div>
             </div>
           </a>
