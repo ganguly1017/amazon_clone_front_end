@@ -11,7 +11,34 @@ import { apiBaseURL } from './../../utils/constant'
 
 
 export const loginRequest = (user, history) => (dispatch) => {
- 
+  // dispatch login request action
+  dispatch({ type: LOGIN_REQUEST })
+
+  // clear login errors
+  dispatch(loginErrorClear())
+
+  axios.post(
+    `${apiBaseURL}/api/user/login`,
+    user
+  ).then((res) => {
+    console.log(res.data)
+
+    // set login user data to state
+    dispatch(setLoginUser(res.data.user))
+
+    // redirect to your account page / admin panel
+    history.push("/your_account")
+
+  }).catch((err) => {
+    // set login errors
+    dispatch(loginError(err.response.data.errors))
+
+    console.log(err.response.data)
+  })
+
+  // set isLoading to false
+  dispatch(loginResponse())
+
 }
 
 // Action creator for login errors
