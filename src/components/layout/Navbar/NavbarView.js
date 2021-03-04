@@ -66,7 +66,7 @@ function NavbarView(props) {
               <input type="text" className={`form-control ${rtl}`} size="50" name="query" id="query"
                 onChange={props.handleQueryChange} value={props.query}
               />
-              <input type="text" name="category" id="category" value={props.selectedCat} hidden />
+              <input type="text" name="category" id="category" value={props.selectedCat} readOnly hidden />
               <div className="input-group-append">
                 <button type="submit" className="btn btn-warning">
                   <i className="fas fa-search"></i>
@@ -87,7 +87,7 @@ function NavbarView(props) {
                   <div className="dropdown-divider"></div>
                   <div className="custom-control custom-radio mb-2">
                     <input className="custom-control-input" type="radio" name="prefLang" id="englishLang" value="en"
-                      onClick={props.handleChangeLang} checked={ props.prefLang == "en" ? true : false } />
+                      onChange={props.handleChangeLang} checked={ props.prefLang == "en" ? true : false } />
                     <label className="custom-control-label" htmlFor="englishLang">
                       <img src="assets/img/flag/english.svg" alt="uk flag" width="50" height="30" />
                     </label>
@@ -95,7 +95,7 @@ function NavbarView(props) {
                   <div className="dropdown-divider"></div>
                   <div className="custom-control custom-radio mb-2">
                     <input className="custom-control-input" type="radio" name="prefLang" id="hindiLang" value="in" 
-                    onClick={props.handleChangeLang} checked={ props.prefLang == "in" ? true : false } />
+                    onChange={props.handleChangeLang} checked={ props.prefLang == "in" ? true : false } />
                     <label className="custom-control-label" htmlFor="hindiLang">
                       <img src="assets/img/flag/hindi.svg" alt="uk flag" width="50" height="30" />
                     </label>
@@ -103,7 +103,7 @@ function NavbarView(props) {
                   <div className="dropdown-divider"></div>
                   <div className="custom-control custom-radio mb-2">
                     <input className="custom-control-input" type="radio" name="prefLang" id="urduLang" value="pk" 
-                    onClick={props.handleChangeLang} checked={ props.prefLang == "pk" ? true : false } />
+                    onChange={props.handleChangeLang} checked={ props.prefLang == "pk" ? true : false } />
                     <label className="custom-control-label" htmlFor="urduLang">
                       <img src="assets/img/flag/urdu.svg" alt="uk flag" width="50" height="30" />
                     </label>
@@ -111,7 +111,7 @@ function NavbarView(props) {
                   <div className="dropdown-divider"></div>
                   <div className="custom-control custom-radio">
                     <input className="custom-control-input" type="radio" name="prefLang" id="banglaLang" value="bd" 
-                    onClick={props.handleChangeLang}  checked={ props.prefLang == "bd" ? true : false } />
+                    onChange={props.handleChangeLang}  checked={ props.prefLang == "bd" ? true : false } />
                     <label className="custom-control-label" htmlFor="banglaLang">
                       <img src="assets/img/flag/bangla.svg" alt="uk flag" width="50" height="30" />
                     </label>

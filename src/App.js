@@ -14,6 +14,7 @@ import NavbarContainer from './components/layout/Navbar/NavbarContainer';
 import Footer from './components/layout/Footer';
 import LoginContainer from './components/Login/LoginContainer';
 import RegisterContainer from './components/Register/RegisterContainer';
+import YourAccountContainer from './components/YourAccount/YourAccountContainer';
 
 function App() {
   const [t, i18n] = useTranslation('common');
@@ -21,6 +22,7 @@ function App() {
   const Login = () => (<LoginContainer t={t} i18n={i18n} />)
   const Landing = () => (<LandingPage t={t} i18n={i18n} />)
   const Register = () => (<RegisterContainer t={t} i18n={i18n} />)
+  const yourAccount = () => (<YourAccountContainer t={t} i18n={i18n} />)
 
   return (
     <Provider store={store}>
@@ -30,6 +32,7 @@ function App() {
           <Route exact path="/" component={Landing} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/your_account" component={yourAccount} />
           <Footer t={t} i18n={i18n} />
         </div>
       </Router>
