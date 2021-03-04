@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import RegisterView from './RegisterView'
+import { registerRequest } from './../../redux/actions/registerActions'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
+
 
 class RegisterContainer extends Component {
   constructor(props){
@@ -23,6 +27,14 @@ class RegisterContainer extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
 
+    const user = {
+      username: this.state.name,
+      password: this.state.password1,
+      email: this.state.email
+    }
+    
+    this.props.registerRequest(user, this.props.history)
+
     console.log(this.state)
   }
 
@@ -38,4 +50,12 @@ class RegisterContainer extends Component {
   }
 }
 
-export default RegisterContainer
+const mapStateToProps = (state) => ({
+  register: state.register
+})
+
+const mapDispatchToProps = {
+  registerRequest
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(RegisterContainer))
