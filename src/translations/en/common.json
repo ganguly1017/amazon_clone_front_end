@@ -68,7 +68,18 @@
     "password_error": "Some error in password.",
     "ok": "OK",
     "username_error": "Some error in your name.",
-    "pass2_error": " Some error in re-type password."
+    "pass2_error": " Some error in re-type password.",
+
+    "username_empty": "Username cannot be empty.",
+    "password_empty": "Password cannot be empty.",
+    "password2_empty": "Re-type Password cannot be empty.",
+    "invalid_email" : "Enter a valid email.",
+    "password2_not_same": "Re-type password is not same as password.",
+    "email_exists": "Email already exists",
+    "db_error" : "Some problem in database",
+    "profile_pic_empty": "Select a profile pic.",
+    "email_not_exists": "Email not exists.",
+    "password_not_match": "Password not match in database."
   },
   "register": {
     "title": "Register",
