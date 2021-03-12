@@ -10,8 +10,8 @@ class RegisterContainer extends Component {
     super(props)
 
     this.state = {
-      name: '',
-      password1: '',
+      username: '',
+      password: '',
       password2: '',
       email: ''
     }
@@ -28,8 +28,9 @@ class RegisterContainer extends Component {
     e.preventDefault()
 
     const user = {
-      username: this.state.name,
-      password: this.state.password1,
+      username: this.state.username,
+      password: this.state.password,
+      password2: this.state.password2,
       email: this.state.email
     }
     

@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import TextFieldInput from './../common/TextFieldInput'
 
 function RegisterView(props) {
   const { t, i18n } = props;
   const rtl = ( i18n.languages[0] == 'pk' ? 'text-right' : '');
 
-
+  const { error } = props.register
+  
   return (
     <div className="container mb-5">
       {/* <!-- Register Form Card Starts --> */}
@@ -13,53 +15,67 @@ function RegisterView(props) {
         <div className="card-body">
           <h4 className={`card-title rtl`}>{t('register.title')}</h4>
           {/* <!-- Register Form Start --> */}
-          <form className="needs-validation" onSubmit={props.handleSubmit} autoComplete="off" noValidate>
-            <div className="form-group">
-              <label htmlFor="userName" className={`${rtl}`}>{t('register.lbl_name')}</label>
-              <input type="text" name="name" className={`form-control ${rtl}`} placeholder="Ganguly Tech" id="userName" value={props.name} onChange={props.handleChange} required />
-              <div className={`valid-feedback ${rtl}`}>
-                <i className="far text-success fa-thumbs-up"></i> {t('validation.ok')}
-            </div>
-              <div className={`invalid-feedback ${rtl}`}>
-                <i className="fas text-danger fa-exclamation-triangle"></i> {t('validation.username_error')}
-            </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="userEmail" className={`${rtl}`}>{t('register.lbl_email')}</label>
-              <input type="email" name="email" className={`form-control ${rtl}`} placeholder="abc@abc.com" id="userEmail"
-                aria-describedby="emailHelp" value={props.email} onChange={props.handleChange} required />
-              <small id="emailHelp" className={`form-text text-muted ${rtl}`}><i className="fas text-primary fa-info"></i> {t('register.email_info')}</small>
-              <div className={`valid-feedback ${rtl}`}>
-                <i className="far text-success fa-thumbs-up"></i>{t('validation.ok')}
-            </div>
-              <div className={`invalid-feedback ${rtl}`}>
-                <i className="fas text-danger fa-exclamation-triangle"></i> {t('validation.email_error')}
-            </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="userPassword" className={`${rtl}`}>{t('register.lbl_pass1')}</label>
-              <input type="password" className={`form-control ${rtl}`} placeholder="******" name="password1" id="userPassword"
-                aria-describedby="passwordHelp" value={props.password1} onChange={props.handleChange} required minLength="6" />
-              <small id="passwordHelp" className={`form-text text-muted ${rtl}`}><i className="fas text-primary fa-info"></i> {t('register.password_info')}</small>
-              <div className={`valid-feedback ${rtl}`}>
-                <i className="far text-success fa-thumbs-up"></i> {t('validation.ok')}
-            </div>
-              <div className={`invalid-feedback ${rtl}`}>
-                <i className="fas text-danger fa-exclamation-triangle"></i> {t('validation.password_error')}
-            </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="userPassword2" className={`${rtl}`}>{t('register.lbl_pass2')}</label>
-              <input type="password" className={`form-control ${rtl}`} placeholder="******" name="password2" id="userPassword2"
-                aria-describedby="passwordHelp2" value={props.password2} onChange={props.handleChange} required minLength="6" />
-              <small id="passwordHelp2" className="form-text text-muted"><i className="fas text-primary fa-info"></i> {t('register.password2_info')}</small>
-              <div className={`valid-feedback ${rtl}`}>
-                <i className="far text-success fa-thumbs-up"></i> {t('validation.ok')}
-            </div>
-              <div className={`invalid-feedback ${rtl}`}>
-                <i className="fas text-danger fa-exclamation-triangle"></i> {t('validation.pass2_error')}
-            </div>
-            </div>
+          <form onSubmit={props.handleSubmit} autoComplete="off" noValidate>
+            
+            <TextFieldInput 
+              type="text"
+              name="username"
+              className={`form-control ${rtl}`}
+              placeholder="Enter user name"
+              id="username"
+              value={props.username}
+              onChange={props.handleChange}
+              lblText={t('register.lbl_name')}
+              i18n={i18n}
+              t={t}
+              error={error.username}
+            />
+
+            <TextFieldInput 
+              type="email"
+              name="email"
+              className={`form-control ${rtl}`}
+              placeholder="abc@abc.com"
+              id="email"
+              value={props.email}
+              onChange={props.handleChange}
+              lblText={t('register.lbl_email')}
+              infoText={t('register.email_info')}
+              i18n={i18n}
+              t={t}
+              error={error.email}
+            />
+
+            <TextFieldInput 
+              type="password"
+              name="password"
+              className={`form-control ${rtl}`}
+              placeholder="******"
+              id="password"
+              value={props.password}
+              onChange={props.handleChange}
+              lblText={t('register.lbl_pass1')}
+              infoText={t('register.password_info')}
+              i18n={i18n}
+              t={t}
+              error={error.password}
+            />
+
+            <TextFieldInput 
+              type="password"
+              name="password2"
+              className={`form-control ${rtl}`}
+              placeholder="******"
+              id="password2"
+              value={props.password2}
+              onChange={props.handleChange}
+              lblText={t('register.lbl_pass2')}
+              infoText={t('register.password2_info')}
+              i18n={i18n}
+              t={t}
+              error={error.password2}
+            />
+
             <button type="submit" className={`btn btn-warning w-100 shadow btn-sm rounded ${rtl}`}>{t('register.btn_register')}</button>
           </form>
           {/* <!-- Register Form Ends --> */}

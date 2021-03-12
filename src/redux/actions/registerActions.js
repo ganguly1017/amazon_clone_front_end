@@ -28,7 +28,7 @@ export const registerRequest = (user, history) => (dispatch) => {
   }).catch((err)=>{
 
     // set error related to register
-    dispatch(registerError(err.response.data.errors))
+    dispatch(registerError(err.response.data.error))
     
   })
 

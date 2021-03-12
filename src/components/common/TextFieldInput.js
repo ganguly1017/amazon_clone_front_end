@@ -17,10 +17,10 @@ function TextFieldInput({
 }) {
 
   const rtl = ( i18n.languages[0] == 'pk' ? 'text-right' : '');
-
+  
   return (
     <div className="form-group">
-      {lblText && <label htmlFor={id} className={`${rtl}`}>{t(lblText)}</label>}
+      {lblText && <label htmlFor={id} className={`${rtl}`}>{lblText}</label>}
 
       <input 
         type={type}
