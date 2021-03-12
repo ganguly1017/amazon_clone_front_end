@@ -21,10 +21,12 @@ export const loginRequest = (user, history) => (dispatch) => {
     `${apiBaseURL}/api/user/login`,
     user
   ).then((res) => {
-    console.log(res.data)
 
     // set login user data to state
     dispatch(setLoginUser(res.data.user))
+
+    // set isLoading to false
+    dispatch(loginResponse())
 
     // redirect to your account page / admin panel
     history.push("/your_account")
@@ -33,11 +35,10 @@ export const loginRequest = (user, history) => (dispatch) => {
     // set login errors
     dispatch(loginError(err.response.data.error))
 
-    console.log(err.response.data)
-  })
+    // set isLoading to false
+    dispatch(loginResponse())
 
-  // set isLoading to false
-  dispatch(loginResponse())
+  })
 
 }
 

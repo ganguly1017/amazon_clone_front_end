@@ -33,21 +33,18 @@ export default function loginReducer(state = initialState, action) {
       return {
         ...state,
         error: action.payload,
-        isLoading: false,
         user: {}
       }
     case LOGIN_ERROR_CLEAR:
       return {
         ...state,
         error: {},
-        isLoading: false,
         user: {}
       }
     case SET_LOGIN_USER:
       return {
         ...state,
         error: {},
-        isLoading: false,
         isAuthenticated: true,
         user: action.payload
       }

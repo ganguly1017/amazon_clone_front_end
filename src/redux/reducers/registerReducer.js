@@ -27,14 +27,12 @@ export default function registerReducer(state = initialState, action) {
     case REGISTER_ERROR:
       return {
         ...state,
-        error: action.payload,
-        isLoading: false
+        error: action.payload
       }
     case REGISTER_ERROR_CLEAR:
       return {
         ...state,
-        error: {},
-        isLoading: false
+        error: {}
       }
     default:
       return state

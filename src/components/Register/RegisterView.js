@@ -6,7 +6,14 @@ function RegisterView(props) {
   const { t, i18n } = props;
   const rtl = ( i18n.languages[0] == 'pk' ? 'text-right' : '');
 
-  const { error } = props.register
+  const { error, isLoading } = props.register
+
+  // check loader status
+  if (isLoading){
+    document.body.classList.add("loading")
+  } else {
+    document.body.classList.remove("loading")
+  }
   
   return (
     <div className="container mb-5">

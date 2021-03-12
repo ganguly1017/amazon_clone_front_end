@@ -5,7 +5,14 @@ import TextFieldInput from './../common/TextFieldInput'
 function LoginView(props) {
   const { t, i18n } = props;
   const rtl = ( i18n.languages[0] == 'pk' ? 'text-right' : '');
-  const { error } = props.login
+  const { error, isLoading } = props.login
+  
+  // check loader status
+  if (isLoading){
+    document.body.classList.add("loading")
+  } else {
+    document.body.classList.remove("loading")
+  }
 
   return (
     <div className="container mb-5">
