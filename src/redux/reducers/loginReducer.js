@@ -8,7 +8,7 @@ import {
 
 const initialState = {
   isLoading: false,
-  errors: {
+  error: {
 
   },
   isAuthenticated: false,
@@ -32,21 +32,21 @@ export default function loginReducer(state = initialState, action) {
     case LOGIN_ERROR:
       return {
         ...state,
-        errors: action.payload,
+        error: action.payload,
         isLoading: false,
         user: {}
       }
     case LOGIN_ERROR_CLEAR:
       return {
         ...state,
-        errors: {},
+        error: {},
         isLoading: false,
         user: {}
       }
     case SET_LOGIN_USER:
       return {
         ...state,
-        errors: {},
+        error: {},
         isLoading: false,
         isAuthenticated: true,
         user: action.payload

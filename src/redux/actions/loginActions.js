@@ -31,7 +31,7 @@ export const loginRequest = (user, history) => (dispatch) => {
 
   }).catch((err) => {
     // set login errors
-    dispatch(loginError(err.response.data.errors))
+    dispatch(loginError(err.response.data.error))
 
     console.log(err.response.data)
   })
