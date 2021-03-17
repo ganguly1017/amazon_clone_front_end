@@ -13,7 +13,9 @@
       "kitchen_hardware": "रसोई हार्डवेयर",
       "prime_deal": "प्रधान सौदे",
       "book": "पुस्तक"
-    }
+    },
+    "register": "यहां रजिस्टर करें।",
+    "logout": "लॉग आउट"
   },
   "footer": {
     "back_to_top": "वापस शीर्ष पर",

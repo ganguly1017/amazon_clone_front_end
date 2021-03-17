@@ -3,7 +3,8 @@ import {
   LOGIN_RESPONSE,
   LOGIN_REQUEST,
   LOGIN_ERROR_CLEAR,
-  SET_LOGIN_USER
+  SET_LOGIN_USER,
+  LOGOUT_USER
 } from './types'
 
 import axios from 'axios'
@@ -70,6 +71,16 @@ export const setLoginUser = (payload) => {
     type: SET_LOGIN_USER,
     payload: payload
   }
+}
+
+
+// Action creator for logout user
+export const logoutUser = (history) => dispatch =>  {
+  // dispatch action 
+  dispatch({ type: LOGOUT_USER })
+
+  // redirect user to home page
+  history.push("/")
 }
 
 

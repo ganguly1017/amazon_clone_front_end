@@ -24,6 +24,12 @@ class RegisterContainer extends Component {
     this.setState({ [name]: value })
   }
 
+  componentDidMount(){
+    if (this.props.login.isAuthenticated){
+      this.props.history.push("/your_account")
+    }
+  }
+
   handleSubmit = (e) => {
     e.preventDefault()
 
@@ -52,7 +58,8 @@ class RegisterContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  register: state.register
+  register: state.register,
+  login: state.login
 })
 
 const mapDispatchToProps = {

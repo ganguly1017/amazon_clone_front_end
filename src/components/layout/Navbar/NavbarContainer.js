@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import NavbarView from './NavbarView';
+import { logoutUser } from './../../../redux/actions/loginActions'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 class NavbarContainer extends Component {
   
@@ -35,6 +38,13 @@ class NavbarContainer extends Component {
     this.setState({query: [event.target.value]});
   }
 
+  logoutUser = (e) => {
+    e.preventDefault()
+
+    // call logout user action
+    this.props.logoutUser(this.props.history)
+  }
+
   handleSearch = (event) => {
     event.preventDefault();
 
@@ -57,9 +67,18 @@ class NavbarContainer extends Component {
         handleQueryChange={this.handleQueryChange}
         query={this.state.query}
         handleSearch={this.handleSearch}
+        logoutUser={this.logoutUser}
       />
     )
   }
 }
 
-export default NavbarContainer;
+const mapStateToProps = (state) => ({
+  login: state.login
+})
+
+const mapDispatchToProps = {
+  logoutUser
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(NavbarContainer))

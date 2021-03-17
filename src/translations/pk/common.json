@@ -13,7 +13,9 @@
       "kitchen_hardware": "کچن ہارڈویئر",
       "prime_deal": "پرائم ڈیلز",
       "book": "کتاب"
-    }
+    },
+    "register": "یہاں اندراج کریں.",
+    "logout": "لاگ آوٹ"
   },
   "footer": {
     "back_to_top": "اوپر کی طرف واپس",

@@ -15,6 +15,12 @@ class LoginContainer extends Component {
     }
   }
 
+  componentDidMount(){
+    if (this.props.login.isAuthenticated){
+      this.props.history.push("/your_account")
+    }
+  }
+
   handleChange = (e) => {
     const name = e.target.name
     const value = e.target.value
@@ -31,8 +37,6 @@ class LoginContainer extends Component {
     }
 
     this.props.loginRequest(user, this.props.history)
-
-    console.log(this.state);
   }
 
   render() {

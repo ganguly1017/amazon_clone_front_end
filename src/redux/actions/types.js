@@ -11,3 +11,4 @@ export const LOGIN_ERROR = "LOGIN_ERROR";
 export const LOGIN_ERROR_CLEAR = "LOGIN_ERROR_CLEAR";
 export const LOGIN_RESPONSE = "LOGIN_RESPONSE";
 export const SET_LOGIN_USER = "SET_LOGIN_USER";
+export const LOGOUT_USER = "LOGOUT_USER";

@@ -13,7 +13,9 @@
       "kitchen_hardware": "Kitchen Hardware",
       "prime_deal": "Prime Deals",
       "book": "Book"
-    }
+    },
+    "register": "Register here.",
+    "logout": "Logout"
   },
   "footer": {
     "back_to_top": "Back to Top",
