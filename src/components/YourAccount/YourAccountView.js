@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function YourAccountView(props) {
   const { t, i18n } = props;
@@ -25,7 +26,7 @@ function YourAccountView(props) {
         </div>
 
         <div className="col-md-4">
-          <a href="new_change_password.html" className="btn w-100">
+          <Link to="/password_change" className="btn w-100">
             <div className="card">
               <div className="card-body">
                 <div className="card-title">
@@ -35,7 +36,7 @@ function YourAccountView(props) {
                 <small className={`text-muted ${rtl}`}>{t('your_account.btn2.sub_title')}</small>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
 
         <div className="col-md-4">
