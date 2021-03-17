@@ -57,7 +57,7 @@ function YourAccountView(props) {
 
       <div className="row">
         <div className="col-md-4">
-          <a href="seller_account_intro.html" className="btn w-100">
+          <Link to="/seller_intro" className="btn w-100">
             <div className="card">
               <div className="card-body">
                 <div className="card-title">
@@ -67,7 +67,7 @@ function YourAccountView(props) {
                 <small className={`text-muted ${rtl}`}>{t('your_account.btn4.sub_title')}</small>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
       {/* <!-- Your Account Ends --> */}
