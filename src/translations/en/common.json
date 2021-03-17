@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "sidebar_title": "Hello, Sign In",
+    "sidebar_title": "Hello, {{ username }}",
     "sidebar_help_title": "Help & Settings",
     "btn_account_title": "Your Account",
     "btn_signin_title": "Sign in",

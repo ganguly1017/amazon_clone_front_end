@@ -54,6 +54,24 @@ function NavbarView(props) {
     </React.Fragment>
   )
 
+  const drawerProfilePic = () => {
+    if (isAuthenticated){
+      return (
+        <img
+          src={apiBaseURL + "/profile_pic/" + user.profile_pic}
+          width="40"
+          height="40"
+          className="rounded-circle"
+          style={{ marginRight: "5px" }}
+        />
+      )
+    } else {
+      return (
+        <i className="fas fa-user-circle"></i>
+      )
+    }
+  }
+
   return (
     <React.Fragment>
       {/* <!-- Navbar Starts --> */}
@@ -68,8 +86,8 @@ function NavbarView(props) {
           <div className="drawer-content drawer-content-scrollable" role="document">
             <div className="drawer-header bg-dark text-white">
               <h4 className={`drawer-title mx-auto ${rtl}`} id="drawer-demo-title">
-                <i className="fas fa-user-circle"></i>
-                {t('navbar.sidebar_title')}
+                {drawerProfilePic()}
+                {t('navbar.sidebar_title', { username: ( user.username ? user.username : "Sign In" ) })}
               </h4>
             </div>
             <div className="drawer-body">
