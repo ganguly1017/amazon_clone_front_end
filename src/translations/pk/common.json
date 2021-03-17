@@ -117,5 +117,19 @@
       "title": "بیچنے والا اکاؤنٹ",
       "sub_title": "اپنی مصنوعات بیچیں۔"
     }
+  },
+  "password_change": {
+    "title": "پاس ورڈ تبدیل کریں",
+    "lbl_txt_username": "تمھارا نام:",
+    "lbl_txt_old_password": "پرانا پاسورڈ:",
+    "lbl_txt_new_password": "نیا پاس ورڈ:",
+    "lbl_txt_new_password2": "نیا پاس ورڈ دوبارہ ٹائپ کریں:",
+    "info_txt_new_password": "پاس ورڈ کم از کم 6 حروف کا ہونا چاہئے",
+    "info_txt_new_password2": "نیا پاس ورڈ دوبارہ ٹائپ کریں۔",
+    "btn_txt_submit": "اپ ڈیٹ",
+    "breadcrumb": {
+      "link1": "آپ کا کھاتہ",
+      "link2": "پاس ورڈ تبدیل کریں"
+    }
   }
 }

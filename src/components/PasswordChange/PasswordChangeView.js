@@ -15,14 +15,14 @@ function PasswordChangeView(props) {
       {/* <!-- Change Password Form Card Starts -->
     <!-- URL Breadcrumb Starts --> */}
       <nav aria-label="breadcrumb">
-        <ol className="breadcrumb bg-transparent ml-n3">
-          <li className="breadcrumb-item"><Link to="/your_account">Your Account</Link></li>
-          <li className="breadcrumb-item active text-danger" aria-current="page">Change Password</li>
+        <ol className={`breadcrumb bg-transparent ml-n3 ${rtl}`}>
+          <li className="breadcrumb-item"><Link to="/your_account">{t('password_change.breadcrumb.link1')}</Link></li>
+          <li className="breadcrumb-item active text-danger" aria-current="page">{t('password_change.breadcrumb.link2')}</li>
         </ol>
       </nav>
       {/* <!-- URL Breadcrumb Ends --> */}
 
-      <h3>Change Password</h3>
+      <h3 className={`${rtl}`}>{t('password_change.title')}</h3>
 
       {/* <!-- Change Password Form Starts --> */}
       <form onSubmit={props.handleSubmit} className="needs-validation w-85 mx-auto mt-5 font-weight-bold" autoComplete="off" noValidate>
@@ -35,7 +35,7 @@ function PasswordChangeView(props) {
           id="username"
           value={props.username}
           onChange={props.handleChange}
-          lblText={"Your Name: "}
+          lblText={t('password_change.lbl_txt_username')}
           i18n={i18n}
           t={t}
           error={error.username}
@@ -49,7 +49,7 @@ function PasswordChangeView(props) {
           id="odlPassword"
           value={props.oldPassword}
           onChange={props.handleChange}
-          lblText={"Old Password: "}
+          lblText={t('password_change.lbl_txt_old_password')}
           i18n={i18n}
           t={t}
           error={error.oldPassword}
@@ -63,8 +63,8 @@ function PasswordChangeView(props) {
           id="newPassword"
           value={props.newPassword}
           onChange={props.handleChange}
-          infoText={"Password must be at least 6 characters."}
-          lblText={"New Password: "}
+          infoText={t('password_change.info_txt_new_password')}
+          lblText={t('password_change.lbl_txt_new_password')}
           i18n={i18n}
           t={t}
           error={error.newPassword}
@@ -78,14 +78,14 @@ function PasswordChangeView(props) {
           id="newPassword"
           value={props.newPassword2}
           onChange={props.handleChange}
-          infoText={" Re-Type new password."}
-          lblText={"Re-Type New Password: "}
+          infoText={t('password_change.info_txt_new_password2')}
+          lblText={t('password_change.lbl_txt_new_password2')}
           i18n={i18n}
           t={t}
           error={error.newPassword2}
         />
 
-        <button type="submit" className="btn btn-warning shadow btn-sm rounded">Update</button>
+        <button type="submit" className="btn btn-warning shadow btn-sm rounded">{t('password_change.btn_txt_submit')}</button>
       </form>
       {/* <!-- Change Password Form Ends -->
     <!-- Change Password Form Card Ends --> */}

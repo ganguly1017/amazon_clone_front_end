@@ -117,5 +117,19 @@
       "title": "Seller Account",
       "sub_title": "Sell your products."
     }
+  },
+  "password_change": {
+    "title": "Change Password",
+    "lbl_txt_username": "Your Name: ",
+    "lbl_txt_old_password": "Old Password: ",
+    "lbl_txt_new_password": "New Password: ",
+    "lbl_txt_new_password2": "Re-Type New Password: ",
+    "info_txt_new_password": "Password must be at least 6 characters.",
+    "info_txt_new_password2": "Re-Type new password.",
+    "btn_txt_submit": "Update",
+    "breadcrumb": {
+      "link1": "Your Account",
+      "link2": "Change Password"
+    }
   }
 }

@@ -117,5 +117,19 @@
       "title": "विक्रेता खाता",
       "sub_title": "अपने उत्पाद बेचें।"
     }
+  },
+  "password_change": {
+    "title": "पासवर्ड बदलें",
+    "lbl_txt_username": "तुम्हारा नाम:",
+    "lbl_txt_old_password": "पुराना पासवर्ड:",
+    "lbl_txt_new_password": "नया पासवर्ड:",
+    "lbl_txt_new_password2": "नया पासवर्ड दोबारा टाइप करें:",
+    "info_txt_new_password": "पासवर्ड कम से कम 6 अंकों का होना चाहिए।",
+    "info_txt_new_password2": "नया पासवर्ड दोबारा टाइप करें।",
+    "btn_txt_submit": "अपडेट करें",
+    "breadcrumb": {
+      "link1": "आपका खाता",
+      "link2": "पासवर्ड बदलें"
+    }
   }
 }
