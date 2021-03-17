@@ -131,5 +131,30 @@
       "link1": "Your Account",
       "link2": "Change Password"
     }
+  },
+  "seller_intro": {
+    "heading": "\"Since last 6 years my friends wealth increased by 3000%, thanks to selling of BSNL, LIC, AIR India & etc on Amazon.\"",
+    "author": {
+      "name": "Narendra Modi, ",
+      "role": "PMO India",
+      "job": "(Amazon Seller)"
+    },
+    "btn_txt": "Start selling",
+    "sub_title": "It only takes 15 minutes to setup your account",
+    "question_txt": "Why sell on Amazon?",
+    "row": {
+      "col1": {
+        "title": "E-Commerce: Your next big sales channel",
+        "content": "Start selling on Amazon - without building a website. Register now to start selling on Amazon.in."
+      },
+      "col2": {
+        "title": "Reach crores of customers",
+        "content": "Sell to crores of engaged customer visiting Amazon.in on desktop and through our mobile app."
+      },
+      "col3": {
+        "title": "Receive timely payments",
+        "content": "Amazon ensures your payments for your delivered orders are deposited directly in your bank account every 7 days."
+      }
+    }
   }
 }
