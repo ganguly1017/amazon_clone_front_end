@@ -7,8 +7,14 @@ function PasswordChangeView(props) {
   const { t, i18n } = props;
   const rtl = (i18n.languages[0] == 'pk' ? 'text-right' : '');
 
-  //const { error, isLoading } = props.login
-  const error = {}
+  const { error, isLoading } = props.login
+  
+  // check loader status
+  if (isLoading){
+    document.body.classList.add("loading")
+  } else {
+    document.body.classList.remove("loading")
+  }
 
   return (
     <div className="container w-50 mt-5 mb-5">

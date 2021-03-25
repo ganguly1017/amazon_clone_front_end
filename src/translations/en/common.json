@@ -81,7 +81,8 @@
     "db_error" : "Some problem in database",
     "profile_pic_empty": "Select a profile pic.",
     "email_not_exists": "Email not exists.",
-    "password_not_match": "Password not match in database."
+    "password_not_match": "Password not match in database.",
+    "oldPassword_not_match": "Old password not match in database."
   },
   "register": {
     "title": "Register",
@@ -155,6 +156,12 @@
         "title": "Receive timely payments",
         "content": "Amazon ensures your payments for your delivered orders are deposited directly in your bank account every 7 days."
       }
+    }
+  },
+  "success": {
+    "password_change": {
+      "title": "Status",
+      "message": "Password change successfully."
     }
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PasswordChangeView from './PasswordChangeView'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import { changePassword } from './../../redux/actions/loginActions'
 
 class PasswordChangeContainer extends Component {
 
@@ -26,7 +27,21 @@ class PasswordChangeContainer extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log(this.state)
+    const user = {
+      username: this.state.username,
+      newPassword: this.state.newPassword,
+      newPassword2: this.state.newPassword2,
+      oldPassword: this.state.oldPassword
+    }
+
+    // send change password request
+    this.props.changePassword(user, this.props.history, this.props.t)
+
+    this.setState({ username: this.props.login.username })
+    this.setState({ newPassword: '' })
+    this.setState({ newPassword2: '' })
+    this.setState({ oldPassword: '' })
+    
   }
 
   render() {
@@ -47,7 +62,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-
+ changePassword
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(PasswordChangeContainer))

@@ -4,7 +4,8 @@ import {
   LOGIN_REQUEST,
   LOGIN_ERROR_CLEAR,
   SET_LOGIN_USER,
-  LOGOUT_USER
+  LOGOUT_USER,
+  CHANGE_PASSWORD
 } from './../actions/types'
 
 const initialState = {
@@ -33,14 +34,12 @@ export default function loginReducer(state = initialState, action) {
     case LOGIN_ERROR:
       return {
         ...state,
-        error: action.payload,
-        user: {}
+        error: action.payload
       }
     case LOGIN_ERROR_CLEAR:
       return {
         ...state,
-        error: {},
-        user: {}
+        error: {}
       }
     case SET_LOGIN_USER:
       return {
@@ -54,6 +53,11 @@ export default function loginReducer(state = initialState, action) {
         ...state,
         isAuthenticated: false,
         user: {}
+      }
+    case CHANGE_PASSWORD:
+      return {
+        ...state,
+        user: action.payload
       }
     default:
       return state

@@ -4,12 +4,14 @@ import {
   LOGIN_REQUEST,
   LOGIN_ERROR_CLEAR,
   SET_LOGIN_USER,
-  LOGOUT_USER
+  LOGOUT_USER,
+  CHANGE_PASSWORD
 } from './types'
 
 import axios from 'axios'
 import { apiBaseURL } from './../../utils/constant'
 import setAuthToken from './../../utils/setAuthToken'
+import Swal from 'sweetalert2'
 
 
 export const loginRequest = (user, history) => (dispatch) => {
@@ -42,6 +44,45 @@ export const loginRequest = (user, history) => (dispatch) => {
 
   }).catch((err) => {
     // set login errors
+    dispatch(loginError(err.response.data.error))
+
+    // set isLoading to false
+    dispatch(loginResponse())
+
+  })
+
+}
+
+export const changePassword = (user, history, t) => (dispatch) => {
+  // dispatch login request action
+  dispatch({ type: LOGIN_REQUEST })
+
+  // clear login errors
+  dispatch(loginErrorClear())
+
+  axios.put(
+    `${apiBaseURL}/api/user/change_password`,
+    user
+  ).then((res) => {
+
+    // set isLoading to false
+    dispatch(loginResponse())
+
+    // update user data in localStorage
+    localStorage.setItem("user", JSON.stringify(res.data.user))
+
+    // set isLoading to false
+    dispatch({ type: CHANGE_PASSWORD, payload: res.data.user })
+
+    // send success message
+    Swal.fire(
+      t('success.password_change.title'),
+      t('success.password_change.message'),
+      'success'
+    )
+
+  }).catch((err) => {
+    // set  errors
     dispatch(loginError(err.response.data.error))
 
     // set isLoading to false
