@@ -162,6 +162,10 @@
     "password_change": {
       "title": "स्थिति",
       "message": "पासवर्ड सफलतापूर्वक बदल जाता है।"
+    },
+    "update_profile_pic": {
+      "title": "स्थिति",
+      "message": "प्रोफ़ाइल Pic अद्यतन सफलतापूर्वक।"
     }
   }
 }

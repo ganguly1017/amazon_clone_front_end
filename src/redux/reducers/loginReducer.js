@@ -5,7 +5,8 @@ import {
   LOGIN_ERROR_CLEAR,
   SET_LOGIN_USER,
   LOGOUT_USER,
-  CHANGE_PASSWORD
+  CHANGE_PASSWORD,
+  UPDATE_PROFILE_PIC
 } from './../actions/types'
 
 const initialState = {
@@ -55,6 +56,11 @@ export default function loginReducer(state = initialState, action) {
         user: {}
       }
     case CHANGE_PASSWORD:
+      return {
+        ...state,
+        user: action.payload
+      }
+    case UPDATE_PROFILE_PIC:
       return {
         ...state,
         user: action.payload

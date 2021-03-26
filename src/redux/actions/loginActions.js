@@ -5,7 +5,8 @@ import {
   LOGIN_ERROR_CLEAR,
   SET_LOGIN_USER,
   LOGOUT_USER,
-  CHANGE_PASSWORD
+  CHANGE_PASSWORD,
+  UPDATE_PROFILE_PIC
 } from './types'
 
 import axios from 'axios'
@@ -53,6 +54,51 @@ export const loginRequest = (user, history) => (dispatch) => {
 
 }
 
+// update profile pic API call
+export const updateUserProfilePic = (formData, t) => (dispatch) => {
+  // dispatch request action
+  dispatch({ type: LOGIN_REQUEST })
+
+  // clear errors
+  dispatch(loginErrorClear())
+
+  axios.post(
+    `${apiBaseURL}/api/user/uploadProfilePic`,
+    formData,
+    {
+      headers: {
+        "content-type": "multipart/form-data"
+      }
+    }
+  ).then((res) => {
+
+    // set isLoading to false
+    dispatch(loginResponse())
+
+
+    localStorage.setItem("user", JSON.stringify(res.data.user))
+
+    // set isLoading to false
+    dispatch({ type: UPDATE_PROFILE_PIC, payload: res.data.user })
+
+    // send success message
+    Swal.fire(
+      t('success.update_profile_pic.title'),
+      t('success.update_profile_pic.message'),
+      'success'
+    )
+
+  }).catch((err) => {
+    // set login errors
+    dispatch(loginError(err.response.data.error))
+
+    // set isLoading to false
+    dispatch(loginResponse())
+  })
+
+}
+
+// change password API call
 export const changePassword = (user, history, t) => (dispatch) => {
   // dispatch login request action
   dispatch({ type: LOGIN_REQUEST })
@@ -121,7 +167,6 @@ export const setLoginUser = (payload) => {
     payload: payload
   }
 }
-
 
 // Action creator for logout user
 export const logoutUser = (history) => dispatch =>  {

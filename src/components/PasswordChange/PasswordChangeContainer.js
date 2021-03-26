@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PasswordChangeView from './PasswordChangeView'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { changePassword } from './../../redux/actions/loginActions'
+import { changePassword, updateUserProfilePic } from './../../redux/actions/loginActions'
 
 class PasswordChangeContainer extends Component {
 
@@ -53,7 +53,8 @@ class PasswordChangeContainer extends Component {
 
     formData.append("profile_pic", this.state.profile_pic)
 
-    console.log(formData.get("profile_pic"))
+    // call to api
+    this.props.updateUserProfilePic(formData, this.props.t)
   }
 
   // profile pic state update
@@ -81,7 +82,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
- changePassword
+ changePassword,
+ updateUserProfilePic
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(PasswordChangeContainer))

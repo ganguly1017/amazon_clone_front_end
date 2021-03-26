@@ -162,6 +162,10 @@
     "password_change": {
       "title": "Status",
       "message": "Password change successfully."
+    },
+    "update_profile_pic": {
+      "title": "Status",
+      "message": "Profile pic updated successfully."
     }
   }
 }
