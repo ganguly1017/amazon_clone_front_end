@@ -30,8 +30,8 @@ function TextFieldInput({
         })} 
         placeholder={placeholder}
         id={id}
-        value={value}
-        onChange={onChange}
+        value={value != undefined ? value : ''}
+        onChange={onChange != undefined ? onChange : ''}
       />
       { infoText && <small className={`form-text text-muted ${rtl}`}><i className="fas text-primary fa-info"></i> {t(infoText)}</small>}
       { error && (

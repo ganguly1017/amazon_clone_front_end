@@ -38,7 +38,7 @@ class PasswordChangeContainer extends Component {
     // send change password request
     this.props.changePassword(user, this.props.history, this.props.t)
 
-    this.setState({ username: this.props.login.username })
+    this.setState({ username: this.props.login.user.username })
     this.setState({ newPassword: '' })
     this.setState({ newPassword2: '' })
     this.setState({ oldPassword: '' })
