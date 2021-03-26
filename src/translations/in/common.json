@@ -66,12 +66,6 @@
     "btn_login_facebook": "फ़ेसबुक से साइन इन करें"
   },
   "validation": {
-    "email_error": "ईमेल में कुछ त्रुटि।",
-    "password_error": "पासवर्ड में कुछ त्रुटि।",
-    "ok": "ठीक है",
-    "username_error": "आपके नाम में कुछ त्रुटि।",
-    "pass2_error": "पासवर्ड फिर से टाइप करने में कुछ त्रुटि।",
-
     "username_empty": "उपयोगकर्ता नाम खाली नहीं हो सकता।",
     "password_empty": "पासवर्ड खाली नहीं हो सकता",
     "password2_empty": "पासवर्ड दोबारा टाइप न करें।",
@@ -82,7 +76,9 @@
     "profile_pic_empty": "प्रोफ़ाइल पिक चुनें।",
     "email_not_exists": "ईमेल मौजूद नहीं है",
     "password_not_match": "डेटाबेस में पासवर्ड मेल नहीं खाता।",
-    "oldPassword_not_match": "पुराना पासवर्ड डेटाबेस में मेल नहीं खाता।"
+    "oldPassword_not_match": "पुराना पासवर्ड डेटाबेस में मेल नहीं खाता।",
+    "profile_pic_error": "प्रोफ़ाइल पिक में कुछ त्रुटि।"
+
   },
   "register": {
     "title": "रजिस्टर करें",
@@ -131,6 +127,10 @@
     "breadcrumb": {
       "link1": "आपका खाता",
       "link2": "पासवर्ड बदलें"
+    },
+    "profile_pic": {
+      "lbl_txt": "नई प्रोफ़ाइल Pic चुनें।",
+      "btn_txt_submit": "प्रस्तुत"
     }
   },
   "seller_intro": {

@@ -13,7 +13,8 @@ class PasswordChangeContainer extends Component {
       username: this.props.login.user.username,
       oldPassword: '',
       newPassword: '',
-      newPassword2: ''
+      newPassword2: '',
+      profile_pic: null
     }
   }
 
@@ -44,12 +45,30 @@ class PasswordChangeContainer extends Component {
     
   }
 
+  // profile pic submit
+  handlePicUpload = (e) => {
+    e.preventDefault()
+    
+    let formData = new FormData()
+
+    formData.append("profile_pic", this.state.profile_pic)
+
+    console.log(formData.get("profile_pic"))
+  }
+
+  // profile pic state update
+  handlePicChange = (e) => {
+    this.setState({ profile_pic: e.target.files[0] })
+  }
+
   render() {
     return (
       <PasswordChangeView
         {...this.props}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
+        handlePicUpload={this.handlePicUpload}
+        handlePicChange={this.handlePicChange}
         {...this.state}
       />
     )

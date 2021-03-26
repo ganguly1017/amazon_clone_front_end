@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import TextFieldInput from './../common/TextFieldInput'
+import { apiBaseURL } from './../../utils/constant'
 
 function PasswordChangeView(props) {
 
   const { t, i18n } = props;
   const rtl = (i18n.languages[0] == 'pk' ? 'text-right' : '');
 
-  const { error, isLoading } = props.login
-  
+  const { error, isLoading, user } = props.login
+
   // check loader status
-  if (isLoading){
+  if (isLoading) {
     document.body.classList.add("loading")
   } else {
     document.body.classList.remove("loading")
@@ -29,6 +30,30 @@ function PasswordChangeView(props) {
       {/* <!-- URL Breadcrumb Ends --> */}
 
       <h3 className={`${rtl}`}>{t('password_change.title')}</h3>
+      <div className="card mx-auto mt-5 shadow p-3 mb-5 bg-body rounded" style={{ width: '18rem' }}>
+        <img
+          src={apiBaseURL + "/profile_pic/" + user.profile_pic}
+          width="200"
+          height="200"
+          className="rounded-circle mx-auto"
+        />
+      </div>
+
+      <form onSubmit={props.handlePicUpload} encType="multipart/form-data" className="needs-validation w-85 mx-auto mt-5 font-weight-bold" autoComplete="off" noValidate>
+
+        <TextFieldInput
+          type="file"
+          name="profile_pic"
+          className={`form-control ${rtl}`}
+          id="profile_pic"
+          onChange={props.handlePicChange}
+          lblText={t("password_change.profile_pic.lbl_txt")}
+          i18n={i18n}
+          t={t}
+          error={error.profile_pic}
+        />
+        <button type="submit" className="btn btn-danger shadow btn-sm rounded">{t("password_change.profile_pic.btn_txt_submit")}</button>
+      </form>
 
       {/* <!-- Change Password Form Starts --> */}
       <form onSubmit={props.handleSubmit} className="needs-validation w-85 mx-auto mt-5 font-weight-bold" autoComplete="off" noValidate>

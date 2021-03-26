@@ -66,12 +66,6 @@
     "btn_login_facebook": "Sign in with Facebook"
   },
   "validation": {
-    "email_error": "Some error in email.",
-    "password_error": "Some error in password.",
-    "ok": "OK",
-    "username_error": "Some error in your name.",
-    "pass2_error": " Some error in re-type password.",
-
     "username_empty": "Username cannot be empty.",
     "password_empty": "Password cannot be empty.",
     "password2_empty": "Re-type Password cannot be empty.",
@@ -82,7 +76,9 @@
     "profile_pic_empty": "Select a profile pic.",
     "email_not_exists": "Email not exists.",
     "password_not_match": "Password not match in database.",
-    "oldPassword_not_match": "Old password not match in database."
+    "oldPassword_not_match": "Old password not match in database.",
+    "profile_pic_error": "Some error in profile pic."
+
   },
   "register": {
     "title": "Register",
@@ -131,6 +127,10 @@
     "breadcrumb": {
       "link1": "Your Account",
       "link2": "Change Password"
+    },
+    "profile_pic": {
+      "lbl_txt": "Select New Profile Pic.",
+      "btn_txt_submit": "Upload"
     }
   },
   "seller_intro": {
