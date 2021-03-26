@@ -1,14 +1,12 @@
 import React from 'react'
 import classnames from 'classnames'
 
-function TextFieldInput({
+function FileFieldInput({
   type,
   name,
   id,
   className,
   onChange,
-  placeholder,
-  value,
   error,
   t,
   i18n,
@@ -28,9 +26,7 @@ function TextFieldInput({
         className={classnames(className, {
           'is-invalid': error
         })} 
-        placeholder={placeholder}
         id={id}
-        value={value}
         onChange={onChange}
       />
       { infoText && <small className={`form-text text-muted ${rtl}`}><i className="fas text-primary fa-info"></i> {t(infoText)}</small>}
@@ -44,4 +40,4 @@ function TextFieldInput({
   )
 }
 
-export default TextFieldInput
+export default FileFieldInput

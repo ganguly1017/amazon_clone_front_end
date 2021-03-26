@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import FileFieldInput from './../common/FileFieldInput'
 import TextFieldInput from './../common/TextFieldInput'
 import { apiBaseURL } from './../../utils/constant'
 
@@ -41,7 +42,7 @@ function PasswordChangeView(props) {
 
       <form onSubmit={props.handlePicUpload} encType="multipart/form-data" className="needs-validation w-85 mx-auto mt-5 font-weight-bold" autoComplete="off" noValidate>
 
-        <TextFieldInput
+        <FileFieldInput
           type="file"
           name="profile_pic"
           className={`form-control ${rtl}`}
