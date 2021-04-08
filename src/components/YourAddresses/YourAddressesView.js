@@ -19,14 +19,14 @@ function YourAddressesView(props) {
       {/* <!-- Address Card --> */}
       <div className="row">
         <div className="col-md-4 my-md-0 my-2">
-          <a href="add_new_address.html" className="btn bg-transparent m-0 p-0">
+          <Link to="/add_new_address" className="btn bg-transparent m-0 p-0">
             <div className="card" style={{ width: "320px", height: "266px", border: "2px dashed #C7C7C7" }}>
               <div className="card-body mt-5">
                 <i className="fas fa-plus fa-3x" style={{ color: "#C7C7C7" }}></i>
                 <h5 className="card-title">Add address</h5>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
         <div className="col-md-4 my-md-0 my-2">
           <CardAddress
