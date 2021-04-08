@@ -11,6 +11,10 @@ class SellerIntroContainer extends Component {
     }
   }
 
+  componentDidMount(){
+    document.title = "Amazon Clone - Seller Intro"
+  }
+
 
   render() {
     return (

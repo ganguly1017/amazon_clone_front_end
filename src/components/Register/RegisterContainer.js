@@ -25,6 +25,7 @@ class RegisterContainer extends Component {
   }
 
   componentDidMount(){
+    document.title = "Amazon Clone - Register"
     if (this.props.login.isAuthenticated){
       this.props.history.push("/your_account")
     }

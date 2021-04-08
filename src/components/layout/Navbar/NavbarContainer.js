@@ -24,6 +24,10 @@ class NavbarContainer extends Component {
 
   }
 
+  componentDidMount(){
+    document.title = "Online site for shopping."
+  }
+
   handleChangeLang = (event) => {
     this.props.i18n.changeLanguage(event.target.value);
     this.setState({ prefLang: [event.target.value] });

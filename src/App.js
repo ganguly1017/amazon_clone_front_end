@@ -1,8 +1,7 @@
 import React from 'react'
 import {
   BrowserRouter as Router,
-  Route,
-  Switch
+  Route
 } from 'react-router-dom'
 
 import { Provider } from 'react-redux'
@@ -10,18 +9,19 @@ import store from './redux/store'
 
 import LandingPage from './components/layout/LandingPage';
 import { useTranslation } from "react-i18next";
+import PrivateRoute from './components/common/PrivateRoute'
 import NavbarContainer from './components/layout/Navbar/NavbarContainer';
 import Footer from './components/layout/Footer';
 import LoginContainer from './components/Login/LoginContainer';
 import RegisterContainer from './components/Register/RegisterContainer';
 import YourAccountContainer from './components/YourAccount/YourAccountContainer';
 import setAuthToken from './utils/setAuthToken'
-import { SET_LOGIN_USER } from  './redux/actions/types'
+import { SET_LOGIN_USER } from './redux/actions/types'
 import PasswordChangeContainer from './components/PasswordChange/PasswordChangeContainer'
 import SellerIntroContainer from './components/SellerAccount/SellerIntroContainer'
 
 // check localStorage for data
-if (localStorage.jwtToken && localStorage.user){
+if (localStorage.jwtToken && localStorage.user) {
   // setAuthToken to HTTP header
   setAuthToken(localStorage.jwtToken)
 
@@ -33,24 +33,35 @@ if (localStorage.jwtToken && localStorage.user){
 function App() {
   const [t, i18n] = useTranslation('common');
 
-  const Login = () => (<LoginContainer t={t} i18n={i18n} />)
-  const Landing = () => (<LandingPage t={t} i18n={i18n} />)
-  const Register = () => (<RegisterContainer t={t} i18n={i18n} />)
-  const yourAccount = () => (<YourAccountContainer t={t} i18n={i18n} />)
-  const PassChange = () => ( <PasswordChangeContainer t={t} i18n={i18n} /> )
-  const SellerIntro = () => ( <SellerIntroContainer t={t} i18n={i18n} /> )
-
   return (
     <Provider store={store}>
       <Router>
         <div>
           <NavbarContainer t={t} i18n={i18n} />
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/your_account" component={yourAccount} />
-          <Route exact path="/password_change" component={PassChange} />
-          <Route exact path="/seller_intro" component={SellerIntro} />
+          <Route exact path="/">
+            <LandingPage t={t} i18n={i18n} />
+          </Route>
+          <Route exact path="/login" >
+            <LoginContainer t={t} i18n={i18n} />
+          </Route>
+          <Route exact path="/register" >
+            <RegisterContainer t={t} i18n={i18n} />
+          </Route>
+          <Route exact path="/your_account" >
+            <PrivateRoute>
+              <YourAccountContainer t={t} i18n={i18n} />
+            </PrivateRoute>
+          </Route>
+          <Route exact path="/password_change" >
+            <PrivateRoute>
+              <PasswordChangeContainer t={t} i18n={i18n} />
+            </PrivateRoute>
+          </Route>
+          <Route exact path="/seller_intro" >
+            <PrivateRoute>
+              <SellerIntroContainer t={t} i18n={i18n} />
+            </PrivateRoute>
+          </Route>
           <Footer t={t} i18n={i18n} />
         </div>
       </Router>

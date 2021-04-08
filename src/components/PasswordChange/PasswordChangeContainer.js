@@ -25,6 +25,10 @@ class PasswordChangeContainer extends Component {
     this.setState({ [name]: value })
   }
 
+  componentDidMount(){
+    document.title = "Amazon Clone - Password Change"
+  }
+
   handleSubmit = (e) => {
     e.preventDefault()
 

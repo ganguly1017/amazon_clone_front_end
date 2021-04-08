@@ -3,6 +3,7 @@ import ImageSlider from './ImageSlider';
 import HomePageProductContainer from './../HomePageProduct/HomePageProductContainer';
 
 function LandingPage(props) {
+  document.title = "Online site for shopping."
   return (
     <React.Fragment>
       <div className="container-fluid px-0">

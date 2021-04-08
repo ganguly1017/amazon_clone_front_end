@@ -16,6 +16,7 @@ class LoginContainer extends Component {
   }
 
   componentDidMount(){
+    document.title = "Amazon Clone - Login"
     if (this.props.login.isAuthenticated){
       this.props.history.push("/your_account")
     }

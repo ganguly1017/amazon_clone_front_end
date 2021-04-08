@@ -14,10 +14,7 @@ class YourAccountContainer extends Component {
   }
 
   componentDidMount(){
-    // if not authenticated user send to login page
-    if (!this.props.login.isAuthenticated){
-      this.props.history.push("/login")
-    }
+    document.title = "Amazon Clone - Your Account"
   }
 
 
