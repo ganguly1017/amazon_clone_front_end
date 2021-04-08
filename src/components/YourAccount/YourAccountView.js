@@ -40,7 +40,7 @@ function YourAccountView(props) {
         </div>
 
         <div className="col-md-4">
-          <a href="your_addresses.html" className="btn w-100">
+          <Link to="/your_addresses" className="btn w-100">
             <div className="card">
               <div className="card-body">
                 <div className="card-title">
@@ -50,7 +50,7 @@ function YourAccountView(props) {
                 <small className={`text-muted ${rtl}`}>{t('your_account.btn3.sub_title')}</small>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
       {/* <!-- Account Panel Starts --> */}

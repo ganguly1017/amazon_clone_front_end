@@ -19,6 +19,7 @@ import setAuthToken from './utils/setAuthToken'
 import { SET_LOGIN_USER } from './redux/actions/types'
 import PasswordChangeContainer from './components/PasswordChange/PasswordChangeContainer'
 import SellerIntroContainer from './components/SellerAccount/SellerIntroContainer'
+import YourAddressesContainer from './components/YourAddresses/YourAddressesContainer'
 
 // check localStorage for data
 if (localStorage.jwtToken && localStorage.user) {
@@ -60,6 +61,11 @@ function App() {
           <Route exact path="/seller_intro" >
             <PrivateRoute>
               <SellerIntroContainer t={t} i18n={i18n} />
+            </PrivateRoute>
+          </Route>
+          <Route exact path="/your_addresses" >
+            <PrivateRoute>
+              <YourAddressesContainer t={t} i18n={i18n} />
             </PrivateRoute>
           </Route>
           <Footer t={t} i18n={i18n} />
